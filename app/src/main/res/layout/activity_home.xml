@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".activity.HomeActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_marginBottom="30dp"/>
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="@string/txt_btn_register"
+        android:layout_above="@+id/btn_login"
+        android:layout_alignStart="@id/btn_login"
+        android:backgroundTint="@color/orange_red"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="300dp"
+        android:onClick="goToRegister"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/orange_red"
+        android:onClick="goToLogin"
+        android:text="@string/txt_btn_login" />
+
+</LinearLayout>

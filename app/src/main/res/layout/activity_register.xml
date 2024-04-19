@@ -6,13 +6,39 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".activity.LoginActivity">
-    
+    tools:context=".activity.RegisterActivity">
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher_round"
         android:layout_marginBottom="30dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_layout"
+        style="@style/til_form">
+
+        <EditText
+            android:id="@+id/name_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fondo_forms"
+            android:hint="@string/txt_name"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nickname_layout"
+        style="@style/til_form">
+
+        <EditText
+            android:id="@+id/nickname_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fondo_forms"
+            android:hint="@string/txt_nickname"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_layout"
@@ -21,7 +47,7 @@
         <EditText
             android:id="@+id/email_user"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/fondo_forms"
             android:hint="@string/txt_email"
             android:inputType="textEmailAddress"/>
@@ -35,32 +61,17 @@
         <EditText
             android:id="@+id/password_user"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_height="wrap_content"
             android:background="@drawable/fondo_forms"
             android:hint="@string/txt_password"
             android:inputType="textPassword"/>
 
-
-
-
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
-
-            <Button
-                android:id="@+id/btn_login"
-                android:layout_width="150dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/txt_login" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/txt_register" />
 
 </LinearLayout>

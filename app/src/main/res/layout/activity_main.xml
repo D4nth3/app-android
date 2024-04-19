@@ -1,39 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
-    <TextView
-        android:id="@+id/texto_inicial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DFDFDF" />
+
+    <LinearLayout
+        android:id="@+id/menu_search_box"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/fondo_busqueda">
+        
+        <Button
+            android:id="@+id/btn_menu"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/font_awesome_6_free_solid_900"
+            android:textSize="20sp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="\uf0c9"/>
+
+        <EditText
+            android:id="@+id/text_search"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:hint="@string/txt_search"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:drawableRight="@drawable/ic_search"/>
+
+    </LinearLayout>
+
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_create_place"
+        android:layout_width="140dp"
         android:layout_height="60dp"
-        android:text="Ir a registro"
-        android:onClick="irARegistro"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/orange_red"
+        android:onClick="createPlace"
+        android:text="@string/btn_create_place" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:text="Ir a login"
-        android:onClick="irALogin"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:text="Crear Lugar"
-        android:onClick="irACrearLugar"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:text="cambiar texto"
-        android:onClick="cambiarTexto"/>
-
-</LinearLayout>
+</RelativeLayout>
